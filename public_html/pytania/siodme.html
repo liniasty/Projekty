@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="siedem.css">
+    <title>Document</title>
+</head>
+<body>
+    <form style="text-align: center; font-size: xx-large;">
+    <p style="text-align: center;">Ile mostów znajduję się w kaliskim parku miejskim.</p>
+        <input type="text" id="pole" name="pole"> <br>
+    </form>
+
+    <div style="text-align: center; margin-top: 2%;">
+      <button onclick="sprawdzkod()">Potwierdź</button>
+</div>
+        <h1 id="Wynik" style="text-align: center;"></h1>
+        
+        <div style="text-align: center;" class="buttons-container">
+            <button  class="button-arounder"><a href="../główna1/pytania.html" class="">HOME</a></button>
+      
+          </div>
+          <script>
+           function sprawdzkod(){
+  var a = parseInt(document.getElementById("pole").value);
+  var punkty = 0;
+  
+  if (a === 5) {
+    punkty = 1;
+  }
+  
+  document.getElementById("Wynik").innerHTML = "Zdobyte punkty: " + punkty;
+}
+
+          </script>
+</body>
+</html>

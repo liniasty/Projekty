@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pierwszekod.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div style="margin-left: 0;" class="box">
+      <form style="text-align:center ; font-size: xx-large;">
+            <p class="pytanie" style="font-size: x-large; text-align: center; ">Zaznacz wszystkie zwięrzeta występujące w kaliskim parku miejskim.</p>
+
+        <label class="pudlo">Wiewiórka
+            <input value="wiewiorka" id="wiewiorka" class="wiewiorka" name="wiewiorka" type="checkbox">
+            <span class="znak"></span>
+          </label><br>
+
+          <label class="pudlo">Żubr
+            <input value="zobr" id="zobr" class="zobr" name="zobr" type="checkbox">
+            <span class="znak"></span>
+          </label><br>
+
+          <label class="pudlo">Kaczka
+            <input value="kaczka" id="kaczka" class="kaczka" name="kaczka" type="checkbox">
+            <span class="znak"></span>
+          </label><br>
+
+          <label class="pudlo">Wróbel   
+            <input value="wrobel" id="wrobel" class="wrobel" name="wrobel" type="checkbox">
+            <span class="znak"></span>
+          </label><br>
+      </form>
+          
+        
+    <div style="text-align: center;">
+          <button onclick="sprawdzkod()">Potwierdź</button>
+    </div>
+          <div style="text-align: center;">
+            <h1 id="tekst"></h1>
+            
+        </div>
+    </div>
+ 
+    <div style="text-align: center;" class="buttons-container">
+      <button  class="button-arounder"><a href="../główna1/pytania.html" class="">HOME</a></button>
+
+    </div>
+    <script>
+       function sprawdzkod() {
+  var punkty = 0;
+  var a = document.getElementById("wiewiorka").checked;
+  var b = document.getElementById("zobr").checked;
+  var c = document.getElementById("kaczka").checked;
+  var d = document.getElementById("wrobel").checked;
+  
+  if (a == true) {
+    punkty++;
+  }
+  
+  if (b == false) {
+    punkty++;
+  }
+  
+  if (c == true) {
+    punkty++;
+  }
+  
+  if (d == true) {
+    punkty++;
+  }
+  
+  var wynik = "Zdobyte punkty: " + punkty;
+  document.getElementById("tekst").innerHTML = wynik;
+}
+
+    </script>
+</body>
+</html>

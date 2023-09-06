@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="szoste.css">
+</head>
+<body>
+
+<div style="text-align: center;">
+    <p style="font-size: xxx-large;">Co to jest ekosystem</p>
+    <form style="text-align: center; font-size: xx-large;">
+        <input style="margin-left: 15%;" type="radio" value="2" name="guzior">Interakcja pomiędzy żywymi i nieożywionymi elementami środowiska, które tworzą zintegrowane systemy.<br>
+        <input style="margin-left: 3%;" type="radio" value="0" name="guzior">Interakcja pomiędzy żywymi elementami środowiska, które tworzą zintegrowane systemy.<br>
+        <input style="margin-left: 8%;" type="radio" value="0" name="guzior">Interakcja pomiędzy nieożywionymi elementami środowiska, które tworzą zintegrowane systemy.<br>
+      </form>  
+        <button  onclick="sprawdzkod()" style="text-align: center; margin-top: 5%;" class="button-82-pushable" role="button">
+            <span class="button-82-shadow"></span>
+            <span class="button-82-edge"></span>
+            <span class="button-82-front text">
+              Potwiredź
+            </span>
+        </button>
+    
+</div>
+
+<h1 id="Wynik" style="text-align: center;"></h1>
+        
+        <div style="text-align: center;" class="buttons-container">
+            <button  class="button-arounder"><a href="../główna1/pytania.html" class="">HOME</a></button>
+      
+          </div>
+<script>
+    function sprawdzkod(){
+        var ele = document.getElementsByName('guzior');
+          
+        for(i = 0; i < ele.length; i++) {
+            if(ele[i].checked)
+            document.getElementById("Wynik").innerHTML
+                    = "Zdobyt punkty : "+ele[i].value;
+        }
+    }
+</script>
+</body>
+</html>

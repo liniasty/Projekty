@@ -1,0 +1,66 @@
+body { width: 100%; 
+    overflow-x:hidden;}
+
+    
+        a:visited {text-decoration:none; color:rgb(0, 0, 0); display: block; width: 100%;}
+        * {
+  box-sizing: border-box;
+}
+
+.logo_szkoly{
+    margin-left: 25%;
+    margin-top: -2%;
+    width: 5%;
+    
+}
+.kalislaw{
+    width: 5%;
+    margin-left: 9%;
+}
+
+.nav-container {
+  background-color: rgb(73, 64, 255);
+  width: 102%;
+
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.lista_ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+}
+
+.lista_li {
+  margin: 0 1em;
+}
+
+a {
+  display: block;
+  color: #000000;
+  text-decoration: none;
+  padding: 1em;
+}
+
+@media screen and (max-width: 767px) {
+  .lista_ul {
+    flex-direction: column;
+  }
+
+  .lista_li {
+    margin: 0;
+  }
+}
+
+  

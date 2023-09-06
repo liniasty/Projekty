@@ -1,0 +1,73 @@
+body { width: 100%; 
+    overflow-x:hidden;
+    overflow-y:hidden;
+  }
+      input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  a {text-decoration: none;}
+          a:hover {text-decoration: none;}
+          A:hover { color: rgb(0, 0, 0) }
+          a:visited {text-decoration:none; color:rgb(0, 0, 0); display: block; width: 100%;}
+         
+          * {
+    box-sizing: border-box;
+  }
+  
+  
+  input[type=number] {
+      width: 5%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: none;
+      background-color: green;
+      color: white;
+    }
+  
+    
+    /* guzik 2  */
+    body {
+      background: hsl(220deg, 10%, 97%);
+      margin: 0;
+      padding: 0;
+    }
+    
+   
+    
+    button {
+      background: white;
+      border: solid 2px black;
+      padding: .375em 1.125em;
+      font-size: 1rem;
+    }
+    
+    .button-arounder {
+      font-size: 2rem;
+      background: hsl(190, 97%, 47%);
+      color: hsl(190deg, 10%, 95%);
+      
+      box-shadow: 0 0px 0px hsla(190deg, 15%, 5%, .2);
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+      
+      --dur: .20s;
+      --delay: .20s;
+      --radius: 16px;
+      
+      transition:
+        border-top-left-radius var(--dur) var(--delay) ease-out,
+        border-top-right-radius var(--dur) calc(var(--delay) * 2) ease-out,
+        border-bottom-right-radius var(--dur) calc(var(--delay) * 3) ease-out,
+        border-bottom-left-radius var(--dur) calc(var(--delay) * 4) ease-out,
+        box-shadow calc(var(--dur) * 4) ease-out,
+        transform calc(var(--dur) * 4) ease-out,
+        background calc(var(--dur) * 4) steps(4, jump-end);
+    }
+    
+    

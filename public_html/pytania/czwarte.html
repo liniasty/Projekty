@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="czwarte.css">
+</head>
+<body>
+    
+
+<p style="font-size: 220%; text-align: center;">Jak potocznie mówi się na wierwórki.</p>
+    <form style="font-size: xx-large; text-align: center;">
+        <input type="radio" id="mikołaj" name="guzior" value="0">Joasia<br>
+        <input type="radio" id="basia" name="guzior" value="1">Basia<br>
+        <input type="radio" id="zosia" name="guzior" value="0">Zosia<br>
+        <input type="radio" id="kasia" name="guzior" value="0">Kasia<br>
+    </form>
+    
+    <div style="text-align: center;">
+        <button onclick="sprawdzkod()">Potwierdź</button>
+  </div>
+    
+        <h1 id="Wynik" style="text-align: center;"></h1>
+
+    <div style="text-align: center; margin-top: 0%;" class="buttons-container">
+        <button  class="button-arounder"><a href="../główna1/pytania.html" class="">HOME</a></button>
+  
+      </div>
+<script>
+    function sprawdzkod() {
+        var ele = document.getElementsByName('guzior');
+          
+        for(i = 0; i < ele.length; i++) {
+            if(ele[i].checked)
+            document.getElementById("Wynik").innerHTML
+                    = "Zdobyt punkty : "+ele[i].value;
+        }
+    }
+</script>
+
+</body>
+</html>

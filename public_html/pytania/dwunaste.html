@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dwunaste.css">
+</head>
+<body>
+<form style="text-align: center; font-size: xx-large;">
+    <p>Czy kaliski park miejski jest najstarszy w Polsce?</p>
+    <input type="radio" id="sześciokąt" value="3" name="guzior" >Tak<br>
+    <input type="radio" id="koło" value="0"  name="guzior" checked>Nie<br>
+    </form>
+    
+    <div style="text-align: center;">
+        <button  style="margin-top: 1%;" onclick="sprawdzkod()">Potwierdź</button>
+  </div>
+
+</div>
+
+<h1 id="Wynik" style="text-align: center;"></h1>
+    
+    <div style="text-align: center;" class="buttons-container">
+        <button  class="button-arounder"><a href="../główna1/pytania.html" class="">HOME</a></button>
+  
+      </div>
+      <script>
+        function sprawdzkod() {
+            var ele = document.getElementsByName('guzior');
+              
+            for(i = 0; i < ele.length; i++) {
+                if(ele[i].checked)
+                document.getElementById("Wynik").innerHTML
+                        = "Zdobyt punkty : "+ele[i].value;
+            }
+        }
+    </script>
+</body>
+</html>

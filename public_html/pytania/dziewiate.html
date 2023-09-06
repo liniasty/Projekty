@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dziewiate.css">
+    <title>Document</title>
+</head>
+<body>
+    <form style="text-align: center; font-size: xx-large;">
+    <p style="text-align: center;">Koło jakiej rzeki znajduję się park?</p>
+        <input type="text" id="pole" name="pole"> <br>
+    </form>
+
+    <div style="text-align: center;">
+        <button  style="margin-top: 1%;" onclick="sprawdzkod()">Potwierdź</button>
+  </div>
+    
+        <h1 id="Wynik" style="text-align: center;"></h1>
+        
+        <div style="text-align: center; " class="buttons-container">
+            <button   class="button-arounder"><a href="../główna1/pytania.html" class="">HOME</a></button>
+      
+          </div>
+          <script>
+            function sprawdzkod(){
+                var a = document.getElementById("pole").value 
+                var punkty =0;
+                if(a=="prosna"||a=="Prosna"||a=="PROSNA"){
+                    punkty=2;
+                }
+                document.getElementById("Wynik").innerHTML = "Zdobyte punkty: " + punkty;
+            }
+          </script>
+</body>
+</html>

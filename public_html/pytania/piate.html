@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="piate.css">
+</head>
+<body>
+    
+        
+        
+        <form style="text-align: center; margin-top: 0%; font-size: xx-large;"><br>
+            <p>Podaj ilość zbiorników wodnych </p><br>
+            <label>Ile zbiorników wodnych (stawów) znajduje się w naszym parku.</label><br>
+            <input type="text" id="pole" >
+        </form>
+
+        <div style="text-align: center;">
+            <button onclick="sprawdzkod()">Potwierdź</button>
+      </div>
+      
+        <h1 id="Wynik" style="text-align: center;"></h1>
+        
+        <div style="text-align: center;" class="buttons-container">
+            <button  class="button-arounder"><a href="../główna1/pytania.html" class="">HOME</a></button>
+      
+          </div>
+<script>
+    function sprawdzkod(){
+        var a = parseInt(document.getElementById("pole").value);
+        var punkty = 0;
+        if(a==7){
+            punkty=2;
+        }
+        document.getElementById("Wynik").innerHTML = "Zdobyte punkty: "+punkty;
+    }
+</script>
+</body>
+</html>
+

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="osme.css">
+</head>
+<body>
+    <div  style="text-align: center;">
+
+    <p style="font-size: xx-large;">Policz ile znajduje się placów zabaw na tereni parku.</p>
+    <input type="text" id="pole"><br>
+    <button style="margin-top: 1%;" onclick="sprawdzkod()">Potwierdź</button>
+    <h1 id="Wynik"></h1>
+
+    </div>
+
+    <div style="text-align: center;" class="buttons-container">
+        <button  class="button-arounder"><a href="../główna1/pytania.html" class="">HOME</a></button>
+  
+      </div>
+
+    <script>
+        function sprawdzkod(){
+            var a =parseInt(document.getElementById("pole").value);
+            var punkty = 0;
+            if(a==2){
+                punkty=2;
+            }
+            document.getElementById("Wynik").innerHTML = "Zdobyte punkty: "+punkty;
+        }
+    </script>
+</body>
+</html>

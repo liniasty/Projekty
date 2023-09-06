@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mapa</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+		}
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+		.back-btn {
+			position: fixed;
+			top: 20px;
+			right: 20px;
+			padding: 10px 20px;
+			background-color: #333;
+			color: #fff;
+			font-size: 16px;
+			cursor: pointer;
+		}
+	</style>
+	<script>
+		window.addEventListener('resize', function() {
+			var img = document.querySelector('img');
+			img.style.height = 'auto';
+			img.style.width = '100%';
+			if (img.offsetHeight > window.innerHeight) {
+				img.style.width = 'auto';
+				img.style.height = '100%';
+			}
+			var btn = document.querySelector('.back-btn');
+			btn.style.top = (window.innerHeight - btn.offsetHeight - 20) + 'px';
+		});
+
+		window.addEventListener('load', function() {
+			var btn = document.createElement('button');
+			btn.innerHTML = 'Powrót do strony startowej';
+			btn.classList.add('back-btn');
+			document.body.appendChild(btn);
+
+			btn.addEventListener('click', function() {
+				window.location.href = 'index.html';
+			});
+
+			
+			window.dispatchEvent(new Event('resize'));
+		});
+	</script>
+</head>
+<body>
+	<img src="../grafiki/MAPA.png" alt="obrazek">
+</body>
+</html>
